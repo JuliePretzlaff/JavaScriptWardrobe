@@ -39,3 +39,28 @@ function goToPortfolio(x) {
         win.focus();
     }
 }
+
+
+//function to change text color and size when mouseover:
+function sizeBigger(x) {
+    x.style.fontSize = "xx-large";
+    x.style.color = "darkgoldenrod";
+}
+function sizeNormal(x) {
+    x.style.fontSize = "large";
+    x.style.color = "crimson";
+}
+
+//function to swap date with name in footer:
+function Swap(div1, div2) {
+    d1 = document.getElementById(div1);
+    d2 = document.getElementById(div2);
+    if (d2.style.display == "none") {
+        d1.style.display = "none";
+        d2.style.display = "flex"
+    }
+    else {
+        d1.style.display = "flex";
+        d2.style.display = "none";
+    }
+};

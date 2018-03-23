@@ -34,7 +34,8 @@
         @RenderBody()
         <hr />
         <footer>
-            <p id="footer">&copy; @DateTime.Now.Year - Julia Pretzlaff</p>
+            <p id="footer1" style="display: flex" onclick="Swap('footer1', 'footer2')">Copyright @DateTime.Now.Year</p>
+            <p id="footer2" style="display: none" onclick="Swap('footer1', 'footer2')">Created by Julia Pretzlaff</p>
         </footer>
     </div>
 

@@ -110,12 +110,16 @@ footer {
     text-align: center;
 }
 
-p#footer {
+p#footer1 {
     color: crimson;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
 }
-
+p#footer2 {
+    color: crimson;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 /*item index stlying*/
