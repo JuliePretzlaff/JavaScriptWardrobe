@@ -4,18 +4,20 @@ function searchItem() {
     var itemSeason = prompt("What season would you like to view?");
     var seasonClass = document.getElementsByClassName("season");
     var nameClass = document.getElementsByClassName("itemName");
+    var photoClass = document.getElementsByClassName("itemPhoto");
+    var linkClass = document.getElementsByClassName("nonnavLink");
     //alert(seasonClass);
     
-    var match = "Your results: ";
+    var match = "Your results |  ";
 
     for (var i = 0; i < seasonClass.length; i++) {
         if (seasonClass[i].innerText == itemSeason) {
-           // alert(i)
-            alert(nameClass[i].innerText);
-            
+            // alert(i)
+            //alert(nameClass[i].innerText + ": " + seasonClass[i].innerText);
+            match = match + nameClass[i].innerText + " | "; 
         }
     }
-    //alert(match);
+    alert(match);
 }
 
 

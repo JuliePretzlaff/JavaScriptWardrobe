@@ -119,7 +119,7 @@ p#footer {
 
 
 /*item index stlying*/
-img.item-photo {
+img.itemPhoto {
     height: 30vh;
 }
 /*img.item-photo:hover{
@@ -168,20 +168,20 @@ a.btn.btn-default.item-index {
         font-weight: bold;
         border: crimson;
     }
-a.nonnav-link {
+a.nonnavLink {
     font-weight: bold;
     color: crimson !important;
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 5vh;
 }
 
-    a.nonnav-link:hover {
+    a.nonnavLink:hover {
         color: #ffd96b !important;
         background-color: transparent !important;
         text-decoration: none !important;
         text-shadow: 1px 1px darkgoldenrod;
     }
-    a.nonnav-link:active {
+    a.nonnavLink:active {
         color: #ffd96b !important;
         background-color: transparent !important;
         
@@ -247,7 +247,7 @@ p.odetails {
 
 /*search button styling:*/
 button#searchbtn {
-    margin-bottom: 5vh;
+    margin-top: 0vh;
     background-color: darkgoldenrod;
     color: #ffd10b;
     font-weight: bold;
@@ -271,4 +271,17 @@ h1#greeting2 {
     font-size: 3rem;
     text-shadow: 1px 1px crimson;
     margin-top: 1vh;
+}
+
+p.season {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #ffd10b;
+    text-shadow: 1px 1px darkgoldenrod;
+}
+
+button.redirectbtn {
+    background-color: #ffd96b;
+    border: solid thick darkgoldenrod;
+    font-family: 'Montserrat', sans-serif;
 }

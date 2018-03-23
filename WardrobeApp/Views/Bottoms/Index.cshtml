@@ -3,29 +3,41 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<script src="~/Content/JavaScript.js"></script>
 
 <div class="row title">
     <h2 class="title">Bottoms</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-5 col-sm-0"></div>
+    <button id="searchbtn" onclick="searchItem()">Search for bottoms by season</button>
 </div>
 <p class="center-link">
     @*@Html.ActionLink("Create New", "Create")*@
     <a class="btn btn-default item-index" href="/Bottoms/Create">Create New</a>
 </p>
 
+
 <div class="row">
     @foreach (var item in Model)
     {
         <div class="col-md-3 col-sm-6 col-lg-1-xs-12">
             <div class="thumbnail">
-                <h3 class="item-name">
+                <h3 class="itemName">
                     @Html.DisplayFor(modelItem => item.BottomName)
                 </h3>
-                <p class="home">
-                    <img class="item-photo" src="@Html.DisplayFor(modelItem => item.BottomPhoto)" /><br />
 
-                    @Html.ActionLink("Details", "Details", new { id = item.BottomID }, new { @class = "nonnav-link" })
+                <p class="home">
+                    <img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.BottomPhoto)" /><br />
+
+                <p class="season">
+                    @Html.DisplayFor(modelItem => item.Season.Season1)
                 </p>
+                <p class="home">
+                    @Html.ActionLink("Details", "Details", new { id = item.BottomID }, new { @class = "nonnavLink" })
+                </p>
+
             </div>
         </div>
     }

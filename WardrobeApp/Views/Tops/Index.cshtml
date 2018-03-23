@@ -9,8 +9,8 @@
     <h2 class="title">Tops</h2>
 </div>
 <div class="row">
-    <div class="col-md-2 col-sm-0"></div>
-    <button id="searchbtn" onclick="searchItem()">Search for an item by season</button>
+    <div class="col-md-5 col-sm-0"></div>
+    <button id="searchbtn" onclick="searchItem()">Search for a top by season</button>
 </div>
 <p class="center-link">
     @*@Html.ActionLink("Create New", "Create")*@
@@ -27,12 +27,13 @@
             </h3>
 
             <p class="home">
-                <img class="item-photo" src="@Html.DisplayFor(modelItem => item.TopPhoto)" /><br />
+                <img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.TopPhoto)" /><br />
 
             <p class="season">
                 @Html.DisplayFor(modelItem => item.Season.Season1)</p>
-
-            @Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "nonnav-link" })
+            <p class="home">
+                @Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "nonnavLink" })
+            </p>
        
         </div>
         </div>
