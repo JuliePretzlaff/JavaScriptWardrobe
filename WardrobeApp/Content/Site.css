@@ -1,0 +1,246 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*nav bar styling*/
+.navbar-inverse {
+    background-color: #ffdfcb !important;
+    border-color: #ffdfcb !important;
+}
+
+a.navbar-brand {
+    color: #ffd10b !important;
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+    text-shadow: 1px 1px darkgoldenrod;
+   
+}
+
+    a.navbar-brand:hover {
+        color: crimson !important;
+        text-shadow: 1px 1px grey;
+    }
+
+
+.navbar-inverse .navbar-nav > li > a { 
+    margin-left: 5vw;
+    color: #ffd10b !important;
+    color: crimson !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+    .navbar-inverse .navbar-nav > li > a:hover {
+        color: #ffd10b !important;
+        background-color: crimson;
+    }
+
+
+
+/*home index page stlying*/
+div .thumbnail.home {
+    background-color: #ffd96b;
+    border: none;
+}
+
+h1#home {
+    color: #ffdfcb;
+    font-family: 'Satisfy', cursive;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    font-size: 5rem;
+    text-shadow: 1px 1px crimson;
+}
+
+h2.home {
+    text-align: center;
+    font-family: 'Itim', cursive;
+    
+}
+
+a.btn.btn-default.home {
+    margin-top: 2%;
+    background-color: darkgoldenrod;
+    color: #ffd10b;
+    font-weight: bold;
+    border: grey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    a.btn.btn-default.home:hover {
+        margin-top: 2%;
+        background-color: #ffd10b;
+        color: crimson;
+        font-weight: bold;
+        border: crimson;
+    }
+
+p.home {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/*footer styling*/
+footer {
+    text-align: center;
+}
+
+p#footer {
+    color: crimson;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+/*item index stlying*/
+img.item-photo {
+    height: 30vh;
+}
+/*img.item-photo:hover{
+    height: 60vh;
+}*/
+
+h3.item-name {
+    text-align: center;
+    font-family: 'Itim', cursive;
+    color: crimson;
+    
+}
+
+div.thumbnail {
+    border-color: lightgrey;
+    border: solid;
+    border-width: 1px;
+}
+
+h2.title {
+    font-family: 'Satisfy', cursive;
+    font-size: 5rem;
+    text-align: center;
+    color:#ffd10b;
+    text-shadow: 1px 1px darkgoldenrod;
+}
+
+p.center-link {
+    text-align: center;
+}
+
+
+a.btn.btn-default.item-index {
+    margin-top: 2%;
+    background-color: #ffd96b;
+    color: crimson;
+    font-weight: bold;
+    border: grey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    a.btn.btn-default.item-index:hover {
+        margin-top: 2%;
+        background-color: crimson;
+        color: #ffd96b;
+        font-weight: bold;
+        border: crimson;
+    }
+a.nonnav-link {
+    font-weight: bold;
+    color: crimson !important;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5vh;
+}
+
+    a.nonnav-link:hover {
+        color: #ffd96b !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+        text-shadow: 1px 1px darkgoldenrod;
+    }
+    a.nonnav-link:active {
+        color: #ffd96b !important;
+        background-color: transparent !important;
+        
+        text-shadow: 1px 1px darkgoldenrod;
+        text-decoration: none !important;
+    }
+    p#outfit{
+       text-align:center;
+    }
+    div.thumbnail.outfit{
+        border-color: lightgrey;
+        border: solid;
+        border-width: 1px;
+    }
+
+
+
+    /*details styling*/
+h4 {
+    color: crimson;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+p.details {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+div.thumbnail.details {
+    background-color: #ffd96b;
+    border: none;
+}
+img.item-details {
+    border: solid;
+    border-color: darkgoldenrod;
+    height: 50vh;
+}
+a.nonnav-link-2 {
+    font-weight: bold;
+    color: crimson !important;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5vh;
+}
+
+    a.nonnav-link-2:hover {
+        color: darkgoldenrod !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+    }
+    a.nonnav-link-2:active {
+        color: darkgoldenrod !important;
+        background-color: transparent !important;
+        text-decoration: none !important;
+    }
+
+    p#detail-links{
+        text-align:center;
+    }
+p.odetails {
+    margin-bottom: 5vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}

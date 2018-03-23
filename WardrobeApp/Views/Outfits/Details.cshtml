@@ -1,0 +1,39 @@
+﻿@model WardrobeApp.Models.Outfit
+
+@{
+    ViewBag.Title = "Details";
+}
+<h2 class="title">Outfit Details</h2>
+<h3 class="item-name">
+    @Html.DisplayFor(model => model.OutfitName) Outfit
+</h3>
+<h4>Top:</h4>
+<p class="odetails">
+    @Html.DisplayFor(model => model.Top.TopName)
+</p>
+<h4>Bottom:</h4>
+<p class="odetails">
+    @Html.DisplayFor(model => model.Bottom.BottomName)
+</p>
+<h4>Accessory:</h4>
+<p class="odetails">
+    @Html.DisplayFor(model => model.Accessory.AccessoryName)
+</p>
+<h4>Shoes:</h4>
+<p class="odetails">
+    @Html.DisplayFor(model => model.Shoe.ShoeName)
+</p>
+<h4>Season:</h4>
+<p class="odetails">
+    @Html.DisplayFor(model => model.Season.Season1)
+</p>
+<h4>Occasion:</h4>
+<p class="odetails">
+    @Html.DisplayFor(model => model.Occassion.OccassionType)
+</p>
+
+
+<p id="detail-links">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.OutfitID }, new { @class = "nonnav-link" }) |
+    @Html.ActionLink("Back to List", "Index", "Index", new { @class = "nonnav-link" })
+</p>

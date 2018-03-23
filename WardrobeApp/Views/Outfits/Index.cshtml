@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WardrobeApp.Models.Outfit>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="row title">
+    <h2 class="title">Outfits</h2>
+</div>
+<p class="center-link">
+    @*@Html.ActionLink("Create New", "Create")*@
+    <a class="btn btn-default item-index" href="/Outfits/Create">Create New</a>
+</p>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-6 col-sm-12 col-lg-1-xs-12">
+            <div class="thumbnail outfit">
+                <h3 class="item-name">
+                    @Html.DisplayFor(modelItem => item.OutfitName)
+                </h3>
+                <div class="row">
+
+                    <div class="col-3">
+                        <p id="outfit">
+                            <img class="item-photo" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" /><img class="item-photo" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <p id="outfit">
+                            <img class="item-photo" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" /><img class="item-photo" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+                        </p>
+                    </div>
+                </div>
+
+                <p id="outfit">
+                    @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "nonnav-link" })
+                </p>
+            </div>
+        </div>
+    }
+</div>
+
