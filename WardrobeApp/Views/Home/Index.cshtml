@@ -1,64 +1,75 @@
-﻿
-<link href="~/Content/HomeStyleSheet.css" rel="stylesheet" />
-@{
-    ViewBag.Title = "Home Page";
-}
+﻿<body onload="Greeting()">
+    <link href="~/Content/HomeStyleSheet.css" rel="stylesheet" />
+    @{
+        ViewBag.Title = "Home Page";
+    }
+    <script src="~/Content/JavaScript.js"></script>
 
-<h1 id="home">Julie's Delightful Wardrobe</h1>
+    <h1 id="home">Julie's Delightful Wardrobe</h1>
 
-<div class="row">
-    <div class="col-md-2 col-sm-0"></div>
-    <a class="btn btn-default home" onclick="SearchItem()">Search for an item by season</a>
-</div>
 
-<div class="row">
-    <div class="col-md-1 col-sm-0"></div>
-    <div class="col-md-2 col-sm-12">
-        <div class="thumbnail home">
-            <h2 class="home">Tops</h2>
-            <p class="home">
-                From dresses to tank tops, view what we have here!</br><a class="btn btn-default home" href="/Tops/Index">Tops</a>
-            </p>
-          
+    <div class="row" id="greeting1">
+        <div class="col-md-2 col-sm-0"></div>
+        <div class="col-md-2 col-sm-12">
+            <h1 id="greeting2"></h1>
         </div>
     </div>
 
-
-<div class="col-md-2 col-sm-12">
-    <div class="thumbnail home">
-        <h2 class="home">Bottoms</h2>
-        <p class="home">Hiking pants for your next trek, or leggings if you feel like lounging.</br><a class="btn btn-default home" href="/Bottoms/Index">Bottoms</a></p>
-    </div>
-</div>
-    </div>
-
-<div class="row">
-    <div class="col-md-1 col-sm-0"></div>
-    <div class="col-md-2 col-sm-12">
-        <div class="thumbnail home">
-            <h2 class="home">Shoes</h2>
-            <p class="home">
-                Shoes that fit anything from the beach to the summit.</br><a class="btn btn-default home" href="/Shoes/Index">Shoes</a>
-            </p>
+        <div class="row">
+            <div class="col-md-2 col-sm-0"></div>
+            <button id="searchbtn" onclick="searchItem()">Search for an item by season</button>
         </div>
-    </div>
+
+        <div class="row">
+            <div class="col-md-1 col-sm-0"></div>
+            <div class="col-md-2 col-sm-12">
+                <div class="thumbnail home">
+                    <h2 class="home">Tops</h2>
+                    <p class="home">
+                        From dresses to tank tops, view what we have here!</br><a class="btn btn-default home" href="/Tops/Index">Tops</a>
+                    </p>
+
+                </div>
+            </div>
 
 
-    <div class="col-md-2 col-sm-12">
-        <div class="thumbnail home">
-            <h2 class="home">Accessories</h2>
-            <p class="home">No outfit is complete without these!</br><a class="btn btn-default home" href="/Accessories/Index">Accessories</a></p>
+            <div class="col-md-2 col-sm-12">
+                <div class="thumbnail home">
+                    <h2 class="home">Bottoms</h2>
+                    <p class="home">Hiking pants for your next trek, or leggings if you feel like lounging.</br><a class="btn btn-default home" href="/Bottoms/Index">Bottoms</a></p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+        <div class="row">
+            <div class="col-md-1 col-sm-0"></div>
+            <div class="col-md-2 col-sm-12">
+                <div class="thumbnail home">
+                    <h2 class="home">Shoes</h2>
+                    <p class="home">
+                        Shoes that fit anything from the beach to the summit.</br><a class="btn btn-default home" href="/Shoes/Index">Shoes</a>
+                    </p>
+                </div>
+            </div>
 
 
-<div class="row">
-    <div class="col-md-1 col-sm-0"></div>
-    <div class="col-md-4 col-sm-12">
-        <div class="thumbnail home">
-            <h2 class="home">Outfits</h2>
-            <p class="home">Before you make any selections, feel free to use our outfit planning tool to make sure you look great!</br><a class="btn btn-default home" href="/Outfits/Index">Outfits</a></p>
+            <div class="col-md-2 col-sm-12">
+                <div class="thumbnail home">
+                    <h2 class="home">Accessories</h2>
+                    <p class="home">No outfit is complete without these!</br><a class="btn btn-default home" href="/Accessories/Index">Accessories</a></p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+
+        <div class="row">
+            <div class="col-md-1 col-sm-0"></div>
+            <div class="col-md-4 col-sm-12">
+                <div class="thumbnail home">
+                    <h2 class="home">Outfits</h2>
+                    <p class="home">Before you make any selections, feel free to use our outfit planning tool to make sure you look great!</br><a class="btn btn-default home" href="/Outfits/Index">Outfits</a></p>
+                </div>
+            </div>
+        </div>
+
+</body>

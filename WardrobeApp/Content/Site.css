@@ -69,7 +69,7 @@ h1#home {
     color: #ffdfcb;
     font-family: 'Satisfy', cursive;
     margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-bottom: 5vh;
     font-size: 5rem;
     text-shadow: 1px 1px crimson;
 }
@@ -126,7 +126,7 @@ img.item-photo {
     height: 60vh;
 }*/
 
-h3.item-name {
+h3.itemName {
     text-align: center;
     font-family: 'Itim', cursive;
     color: crimson;
@@ -243,4 +243,32 @@ p.odetails {
     margin-bottom: 5vh;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+}
+
+/*search button styling:*/
+button#searchbtn {
+    margin-bottom: 5vh;
+    background-color: darkgoldenrod;
+    color: #ffd10b;
+    font-weight: bold;
+    border: grey;
+    font-family: 'Montserrat', sans-serif;
+}
+
+    button#searchbtn:hover {
+        background-color: #ffd10b;
+        color: crimson;
+        font-weight: bold;
+        border: crimson;
+    }
+
+
+h1#greeting2 {
+    color: #ffdfcb;
+    font-family: 'Satisfy', cursive;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-size: 3rem;
+    text-shadow: 1px 1px crimson;
+    margin-top: 1vh;
 }
