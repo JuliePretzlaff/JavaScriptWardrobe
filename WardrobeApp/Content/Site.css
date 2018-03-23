@@ -251,7 +251,7 @@ p.odetails {
 
 /*search button styling:*/
 button#searchbtn {
-    margin-top: 0vh;
+    margin-top: 2vh;
     background-color: darkgoldenrod;
     color: #ffd10b;
     font-weight: bold;
@@ -288,4 +288,13 @@ button.redirectbtn {
     background-color: #ffd96b;
     border: solid thick darkgoldenrod;
     font-family: 'Montserrat', sans-serif;
+}
+button.redirectbtn:hover {
+    background-color: crimson;
+    border: solid thick darkgoldenrod;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea{
+    margin-left: 2vw;
 }

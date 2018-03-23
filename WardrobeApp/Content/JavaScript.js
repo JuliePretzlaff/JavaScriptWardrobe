@@ -64,3 +64,52 @@ function Swap(div1, div2) {
         d2.style.display = "none";
     }
 };
+
+//function from homework: onfocus/onblur
+function colorChange(x) {
+    x.style.border = "thick solid crimson";
+}
+function colorNormal(x) {
+    x.style.border = "thin solid lightgrey";
+}
+
+
+//get outfit array function:
+function getOutfit() {
+    var outfitArray = document.getElementsByClassName('itemName');
+    var responseArray = new Array(0);
+    var userResponse = confirm('Would you like Julie to choose an outfit for you based on your needs?');
+    if (userResponse) {
+        var active = prompt('Do you want to be active outdoors or dress up to go to dinner? Type "outdoors" or "dinner"')
+        var temp = prompt('Is is hot or chold outside? Type "hot" or "cold"')
+        var color = prompt('Are you looking for something colorful or muted?  Type "colorful" or "muted"')
+        responseArray.push(active)
+        responseArray.push(temp)
+        responseArray.push(color)
+    }
+    //alert(responseArray[0] + responseArray[1] + responseArray[2])
+    if (responseArray[0] == 'outdoors' && responseArray[1] == 'cold' && responseArray[2] == 'colorful') {
+        alert('Julie has chosen ' + outfitArray[7].innerText + '.');
+    }
+    if (responseArray[0] == 'dinner' && responseArray[1] == 'cold' && responseArray[2] == 'colorful') {
+        alert('Julie has chosen ' + outfitArray[8].innerText + '.');
+    }
+    if (responseArray[0] == 'outdoors' && responseArray[1] == 'hot' && responseArray[2] == 'colorful') {
+        alert('Julie has chosen ' + outfitArray[11].innerText + '.');
+    }
+    if (responseArray[0] == 'outdoors' && responseArray[1] == 'cold' && responseArray[2] == 'muted') {
+        alert('Julie has chosen ' + outfitArray[9].innerText + '.');
+    }
+
+    
+    if (responseArray[0] == 'dinner' && responseArray[1] == 'hot' && responseArray[2] == 'colorful') {
+        alert('Julie has chosen ' + outfitArray[15].innerText + '.');
+    }
+    if (responseArray[0] == 'dinner' && responseArray[1] == 'hot' && responseArray[2] == 'muted') {
+        alert('Julie has chosen ' + outfitArray[9].innerText + '.');
+    }
+    if (responseArray[0] == 'dinner' && responseArray[1] == 'cold' && responseArray[2] == 'muted') {
+        alert('Julie has chosen ' + outfitArray[14].innerText + '.');
+    }
+    
+}

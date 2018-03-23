@@ -3,43 +3,95 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<script src="~/Content/JavaScript.js"></script>
 
 <div class="row title">
     <h2 class="title">Outfits</h2>
 </div>
+<div class="row">
+    <div class="col-md-4 col-sm-0"></div>
+    <button id="searchbtn" onclick="getOutfit()">Click Here for Help Choosing an Outfit Based On Your Needs</button>
+
+</div>
+<div class="row">
+    <div class="col-md-4 col-sm-0"></div>
+    <button id="searchbtn" onclick="chooseOutfit()">Can't Choose an Outfit?  Click Here!</button>
+</div>
+
 <p class="center-link">
     @*@Html.ActionLink("Create New", "Create")*@
     <a class="btn btn-default item-index" href="/Outfits/Create">Create New</a>
 </p>
 
+
+@*display for each outfit*@
 <div class="row">
     @foreach (var item in Model)
     {
-        <div class="col-md-6 col-sm-12 col-lg-1-xs-12">
-            <div class="thumbnail outfit">
-                <h3 class="item-name">
-                    @Html.DisplayFor(modelItem => item.OutfitName)
-                </h3>
-                <div class="row">
+    <div class="col-md-6 col-sm-12 col-lg-1-xs-12">
+        <div class="thumbnail outfit" id="swap1" onclick="Swap('swap1', 'swap2')">
+            <h3 class="itemName">
+                @Html.DisplayFor(modelItem => item.OutfitName)
+            </h3>
+            <div class="row">
 
-                    <div class="col-3">
-                        <p id="outfit">
-                            <img class="item-photo" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" /><img class="item-photo" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
-                        </p>
-                    </div>
-                    <div class="col-3">
-                        <p id="outfit">
-                            <img class="item-photo" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" /><img class="item-photo" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
-                        </p>
-                    </div>
+                <div class="col-3">
+                    <p id="outfit">
+                        <img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.Top.TopPhoto)" /><img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.Accessory.AccessoryPhoto)" />
+                    </p>
                 </div>
+                <div class="col-3">
+                    <p id="outfit">
+                        <img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.Bottom.BottomPhoto)" /><img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.Shoe.ShoePhoto)" />
+                    </p>
+                </div>
+            </div>
+            <p class="season">
+                @Html.DisplayFor(modelItem => item.Season.Season1)
+            </p>
+            <p id="outfit">
+                @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "nonnavLink" })
+            </p>
+        </div>
 
-                <p id="outfit">
-                    @Html.ActionLink("Details", "Details", new { id = item.OutfitID }, new { @class = "nonnav-link" })
+        @*swap display for each outfit*@
+        <div class="thumbnail outfit" style="display:none" id="swap2" onclick="Swap('swap1', 'swap2')">
+            <div class="row">
+                <h3 class="itemName">
+                    @Html.DisplayFor(model => item.OutfitName) Outfit
+                </h3>
+            </div><br/>
+            <div class="row">
+                <h4>Top:</h4>
+                <p class="odetails">
+                    @Html.DisplayFor(model => item.Top.TopName)
+                </p>
+            </div><br />
+
+            <div class="row">
+                <h4>Bottom:</h4>
+                <p class="odetails">
+                    @Html.DisplayFor(model => item.Bottom.BottomName)
+                </p>
+            </div><br />
+
+            <div class="row">
+                <h4>Accessory:</h4>
+                <p class="odetails">
+                    @Html.DisplayFor(model => item.Accessory.AccessoryName)
                 </p>
             </div>
+
+            <div class="row">
+                <h4>Shoes:</h4>
+                <p class="odetails">
+                    @Html.DisplayFor(model => item.Shoe.ShoeName)
+                </p>
+            </div>
+
         </div>
-    }
-</div>
+
+    </div>
+            }
+        </div>
 

@@ -69,10 +69,26 @@
         </div>
     </div>
 
-    <div class="col-md-2 col-sm-0"></div>
+    <div class="col-md-1 col-sm-0"></div>
     <div class="row">
-        <button onclick="goToPortfolio(this)" class="redirectbtn">See more of Julie's Work!</button>
+        <button onclick="goToPortfolio(this)" class="redirectbtn">Click Here to See More of Julie's Delightful Work!</button>
         <output name="result" id="confirmResponse"></output>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1 col-sm-0"></div>
+        <div class="col-md-4 col-sm-12">
+            <div class="thumbnail home">
+                <h2 class="home">Contact Julie</h2>
+                <form action="/action_page.php" id="usrform">
+
+                    <textarea id="name" placeholder="Name" rows="1" cols="50"onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea><br />
+                    <textarea id="email" placeholder="email" rows="1" cols="50"onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea><br />
+                    <textarea id="comments" placeholder="comments" rows="4" cols="50" onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea>
+                    <p class="home"><a class="btn btn-default home" href="/Outfits/Index">Submit</a></p>
+                </form>
+            </div>
+        </div>
     </div>
 
 </body>
