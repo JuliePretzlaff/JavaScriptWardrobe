@@ -74,42 +74,59 @@ function colorNormal(x) {
 }
 
 
+//better choose outfit array function:
+function chooseOutfit() {
+        var userArray = new Array(0);
+        var userResponse = confirm('Would you like help choosing between several outfits?');
+        while (userResponse) {
+            var outfit = prompt('Please enter the name of an outfit');
+            userResponse = confirm('Would you like to add another outfit?');
+            userArray.push(outfit);
+        }
+        var z = Math.floor((Math.random() * 50) + 1);
+        if (userArray[0] == null) {
+            alert('You can make your own choice.');
+        }
+        else if (z > 0 && z < 20) {
+            alert('Julie Chooses: ' + userArray[0]);
+        }
+        else if (z > 19 && z < 30) {
+            alert('Julie Chooses: ' + userArray[1]);
+        }
+        else if (z > 29 && z < 51) {
+            alert('Julie Chooses: ' + userArray[2]);
+        }
+        
+        else {
+            alert('You can make your own choice.');
+        }
+    }
+
 //get outfit array function:
 function getOutfit() {
-    var outfitArray = document.getElementsByClassName('itemName');
+    //var outfitArray = document.getElementsByClassName('itemName');
     var responseArray = new Array(0);
     var userResponse = confirm('Would you like Julie to choose an outfit for you based on your needs?');
     if (userResponse) {
         var active = prompt('Do you want to be active outdoors or dress up to go to dinner? Type "outdoors" or "dinner"')
         var temp = prompt('Is is hot or chold outside? Type "hot" or "cold"')
-        var color = prompt('Are you looking for something colorful or muted?  Type "colorful" or "muted"')
         responseArray.push(active)
         responseArray.push(temp)
-        responseArray.push(color)
     }
     //alert(responseArray[0] + responseArray[1] + responseArray[2])
-    if (responseArray[0] == 'outdoors' && responseArray[1] == 'cold' && responseArray[2] == 'colorful') {
-        alert('Julie has chosen ' + outfitArray[7].innerText + '.');
+    if (responseArray[0] == 'outdoors' && responseArray[1] == 'cold') {
+        alert('Julie has chosen Snow Day Outfit.');
     }
-    if (responseArray[0] == 'dinner' && responseArray[1] == 'cold' && responseArray[2] == 'colorful') {
-        alert('Julie has chosen ' + outfitArray[8].innerText + '.');
+    else if (responseArray[0] == 'dinner' && responseArray[1] == 'cold') {
+        alert('Julie has chosen Sweater Weather Outfit.');
     }
-    if (responseArray[0] == 'outdoors' && responseArray[1] == 'hot' && responseArray[2] == 'colorful') {
-        alert('Julie has chosen ' + outfitArray[11].innerText + '.');
+    else if (responseArray[0] == 'outdoors' && responseArray[1] == 'hot') {
+        alert('Julie has chosen Work Out Outfit.');
     }
-    if (responseArray[0] == 'outdoors' && responseArray[1] == 'cold' && responseArray[2] == 'muted') {
-        alert('Julie has chosen ' + outfitArray[9].innerText + '.');
+    else if (responseArray[0] == 'dinner' && responseArray[1] == 'hot') {
+        alert('Julie has chosen Out For The Afternoon Outfit.');
     }
-
-    
-    if (responseArray[0] == 'dinner' && responseArray[1] == 'hot' && responseArray[2] == 'colorful') {
-        alert('Julie has chosen ' + outfitArray[15].innerText + '.');
+    else {
+        alert('You should just pick your own outfit.');
     }
-    if (responseArray[0] == 'dinner' && responseArray[1] == 'hot' && responseArray[2] == 'muted') {
-        alert('Julie has chosen ' + outfitArray[9].innerText + '.');
-    }
-    if (responseArray[0] == 'dinner' && responseArray[1] == 'cold' && responseArray[2] == 'muted') {
-        alert('Julie has chosen ' + outfitArray[14].innerText + '.');
-    }
-    
 }

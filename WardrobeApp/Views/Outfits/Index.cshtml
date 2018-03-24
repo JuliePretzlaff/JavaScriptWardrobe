@@ -14,7 +14,7 @@
 
 </div>
 <div class="row">
-    <div class="col-md-4 col-sm-0"></div>
+    <div class="col-md-5 col-sm-0"></div>
     <button id="searchbtn" onclick="chooseOutfit()">Can't Choose an Outfit?  Click Here!</button>
 </div>
 
@@ -56,38 +56,22 @@
 
         @*swap display for each outfit*@
         <div class="thumbnail outfit" style="display:none" id="swap2" onclick="Swap('swap1', 'swap2')">
-            <div class="row">
+            
                 <h3 class="itemName">
                     @Html.DisplayFor(model => item.OutfitName) Outfit
                 </h3>
-            </div><br/>
-            <div class="row">
-                <h4>Top:</h4>
+  
+                <h4>Featured Items:</h4>
                 <p class="odetails">
                     @Html.DisplayFor(model => item.Top.TopName)
-                </p>
-            </div><br />
-
-            <div class="row">
-                <h4>Bottom:</h4>
-                <p class="odetails">
+                
                     @Html.DisplayFor(model => item.Bottom.BottomName)
-                </p>
-            </div><br />
-
-            <div class="row">
-                <h4>Accessory:</h4>
-                <p class="odetails">
+                
                     @Html.DisplayFor(model => item.Accessory.AccessoryName)
-                </p>
-            </div>
-
-            <div class="row">
-                <h4>Shoes:</h4>
-                <p class="odetails">
+               
                     @Html.DisplayFor(model => item.Shoe.ShoeName)
                 </p>
-            </div>
+          
 
         </div>
 
