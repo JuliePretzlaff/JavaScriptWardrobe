@@ -8,12 +8,22 @@
 <div class="row title">
     <h2 class="title">Tops</h2>
 </div>
-@*filter search button*@
+@*filter searchItem button*@
 <div class="row">
     <div class="col-md-5 col-sm-0"></div>
     <button id="searchbtn" onclick="searchItem()">Search for a top by season</button>
 </div>
-
+@*//drop down method to call search item function:*@
+<div class="row">
+    <div class="col-md-5 col-sm-0"></div>
+    <select id="mySelect" onchange="searchItem()">
+        <option value="Select">Choose a season!
+        <option value="Winter">Winter
+        <option value="Spring">Spring
+        <option value="Summer">Summer
+        <option value="Fall">Fall
+    </select>
+</div>
 @*<div class="row">
         <div class="col-md-5 col-sm-0"></div>
         <button id="searchbtn" onclick="removePhoto()">Click to remove photos from view</button>

@@ -15,6 +15,17 @@
     <div class="col-md-5 col-sm-0"></div>
     <button id="searchbtn" onclick="searchItem()">Search for accessories by season</button>
 </div>
+@*//drop down method to call search item function:*@
+<div class="row">
+    <div class="col-md-5 col-sm-0"></div>
+    <select id="mySelect" onchange="searchItem()">
+        <option value="Select">Choose a season!
+        <option value="Winter">Winter
+        <option value="Spring">Spring
+        <option value="Summer">Summer
+        <option value="Fall">Fall
+    </select>
+</div>
 <p class="center-link">
     @*@Html.ActionLink("Create New", "Create")*@
     <a class="btn btn-default item-index" href="/Accessories/Create">Create New</a>

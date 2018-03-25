@@ -1,7 +1,8 @@
 ﻿
 //function to open search option
 function searchItem() {
-    var itemSeason = prompt("What season would you like to view?");
+    //var itemSeason = prompt("What season would you like to view?");
+    var itemSeason= document.getElementById("mySelect").value;
     var seasonClass = document.getElementsByClassName("season");
     var nameClass = document.getElementsByClassName("itemName");
     var photoClass = document.getElementsByClassName("itemPhoto");
@@ -19,6 +20,16 @@ function searchItem() {
     }
     //if(seasonclass)
     alert(match);
+
+
+
+   
+
+
+
+
+
+
 }
 
 
