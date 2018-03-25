@@ -1,4 +1,5 @@
-﻿<body onload="Greeting()">
+﻿@*onload greeting function called*@
+<body onload="Greeting()">
     <link href="~/Content/HomeStyleSheet.css" rel="stylesheet" />
     @{
         ViewBag.Title = "Home Page";
@@ -7,7 +8,7 @@
 
     <h1 id="home">Julie's Delightful Wardrobe</h1>
 
-
+   @*area where greeting will be displayer per greeting function*@
     <div class="row" id="greeting1">
         <div class="col-md-2 col-sm-0"></div>
         <div class="col-md-2 col-sm-12">
@@ -16,7 +17,7 @@
     </div>
 
 
-
+@*link to each view*@
     <div class="row">
         <div class="col-md-1 col-sm-0"></div>
         <div class="col-md-2 col-sm-12">
@@ -69,12 +70,15 @@
         </div>
     </div>
 
+
+    @*button allowing users to decide if they want to navigate way from this page*@
     <div class="col-md-1 col-sm-0"></div>
     <div class="row">
         <button onclick="goToPortfolio(this)" class="redirectbtn">Click Here to See More of Julie's Delightful Work!</button>
         <output name="result" id="confirmResponse"></output>
     </div>
 
+    @*contact box with dynamic forms*@
     <div class="row">
         <div class="col-md-1 col-sm-0"></div>
         <div class="col-md-4 col-sm-12">

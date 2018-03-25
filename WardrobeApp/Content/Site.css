@@ -252,16 +252,17 @@ p.odetails {
 /*search button styling:*/
 button#searchbtn {
     margin-top: 2vh;
-    background-color: darkgoldenrod;
-    color: #ffd10b;
+    background-color: #ffd10b;
+    color: crimson;
     font-weight: bold;
-    border: grey;
+    border: thick;
+    border-color: crimson;
     font-family: 'Montserrat', sans-serif;
 }
 
     button#searchbtn:hover {
-        background-color: #ffd10b;
-        color: crimson;
+        background-color: crimson;
+        color: #ffd10b;
         font-weight: bold;
         border: crimson;
     }
@@ -283,7 +284,7 @@ p.season {
     color: #ffd10b;
     text-shadow: 1px 1px darkgoldenrod;
 }
-
+/*redirect button styling*/
 button.redirectbtn {
     background-color: #ffd96b;
     border: solid thick darkgoldenrod;
@@ -295,6 +296,7 @@ button.redirectbtn:hover {
     font-family: 'Montserrat', sans-serif;
 }
 
+/*form formatting*/
 textarea{
     margin-left: 2vw;
 }

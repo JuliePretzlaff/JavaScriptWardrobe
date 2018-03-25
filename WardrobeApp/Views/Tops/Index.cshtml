@@ -8,10 +8,18 @@
 <div class="row title">
     <h2 class="title">Tops</h2>
 </div>
+@*filter search button*@
 <div class="row">
     <div class="col-md-5 col-sm-0"></div>
     <button id="searchbtn" onclick="searchItem()">Search for a top by season</button>
 </div>
+
+@*<div class="row">
+        <div class="col-md-5 col-sm-0"></div>
+        <button id="searchbtn" onclick="removePhoto()">Click to remove photos from view</button>
+    </div>*@
+
+
 <p class="center-link">
     @*@Html.ActionLink("Create New", "Create")*@
     <a class="btn btn-default item-index" href="/Tops/Create">Create New</a>
@@ -20,22 +28,23 @@
 <div class="row">
     @foreach (var item in Model)
     {
-    <div class="col-md-3 col-sm-6 col-lg-1-xs-12">
-        <div class="thumbnail">
-            <h3 class="itemName" onmouseover="sizeBigger(this)" onmouseout="sizeNormal(this)">
-                @Html.DisplayFor(modelItem => item.TopName)
-            </h3>
+        <div class="col-md-3 col-sm-6 col-lg-1-xs-12">
+            <div class="thumbnail">
+                <h3 class="itemName" onmouseover="sizeBigger(this)" onmouseout="sizeNormal(this)">
+                    @Html.DisplayFor(modelItem => item.TopName)
+                </h3>
 
-            <p class="home">
-                <img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.TopPhoto)" /><br />
+                <p class="home">
+                    <img class="itemPhoto" src="@Html.DisplayFor(modelItem => item.TopPhoto)" /><br />
 
-            <p class="season">
-                @Html.DisplayFor(modelItem => item.Season.Season1)</p>
-            <p class="home">
-                @Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "nonnavLink" })
-            </p>
-       
-        </div>
+                <p class="season">
+                    @Html.DisplayFor(modelItem => item.Season.Season1)
+                </p>
+                <p class="home">
+                    @Html.ActionLink("Details", "Details", new { id = item.TopID }, new { @class = "nonnavLink" })
+                </p>
+
+            </div>
         </div>
     }
 </div>

@@ -8,15 +8,16 @@ function searchItem() {
     var linkClass = document.getElementsByClassName("nonnavLink");
     //alert(seasonClass);
     
-    var match = "Your results |  ";
+    var match = "Your results :  ";
 
     for (var i = 0; i < seasonClass.length; i++) {
         if (seasonClass[i].innerText == itemSeason) {
-            // alert(i)
+            //alert(i)
             //alert(nameClass[i].innerText + ": " + seasonClass[i].innerText);
             match = match + nameClass[i].innerText + " | "; 
         }
     }
+    //if(seasonclass)
     alert(match);
 }
 
@@ -25,7 +26,8 @@ function searchItem() {
 function Greeting() {
     var x = document.getElementById("greeting1");
     var userName = prompt('Hello and Welcome! What is your name?');
-    x.getElementsByTagName('h1')[0].innerText = 'Welcome ' + userName + '!';
+    var size= prompt('What size clothing do you wear?')
+    x.getElementsByTagName('h1')[0].innerText = 'Welcome ' + userName + '!  Your size is: ' + size;
 }
 
 //function to navigate to another site
@@ -65,7 +67,7 @@ function Swap(div1, div2) {
     }
 };
 
-//function from homework: onfocus/onblur
+//function from homework: onfocus/onblur for fields in a form
 function colorChange(x) {
     x.style.border = "thick solid crimson";
 }
@@ -85,7 +87,7 @@ function chooseOutfit() {
         }
         var z = Math.floor((Math.random() * 50) + 1);
         if (userArray[0] == null) {
-            alert('You can make your own choice.');
+            alert('Feel free to make your own choice.');
         }
         else if (z > 0 && z < 20) {
             alert('Julie Chooses: ' + userArray[0]);
@@ -98,7 +100,7 @@ function chooseOutfit() {
         }
         
         else {
-            alert('You can make your own choice.');
+            alert('Feel free to make your own choice.');
         }
     }
 
@@ -127,6 +129,14 @@ function getOutfit() {
         alert('Julie has chosen Out For The Afternoon Outfit.');
     }
     else {
-        alert('You should just pick your own outfit.');
+        alert('Feel free to pick your own outfit.');
     }
 }
+
+
+////remove photo test
+//    function removePhoto() {
+//        var x = document.getElementsByClassName("itemPhoto");
+//        x.remove(2);
+//    }
+
