@@ -72,6 +72,15 @@ h1#home {
     margin-bottom: 5vh;
     font-size: 5rem;
     text-shadow: 1px 1px crimson;
+    text-align:center;
+}
+h1#home1 {
+    color: #ffdfcb;
+    font-family: 'Satisfy', cursive;
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-size: 5rem;
+    text-shadow: 1px 1px crimson;
 }
 
 h2.home {
@@ -195,11 +204,17 @@ a.nonnavLink {
     p#outfit{
        text-align:center;
     }
-    div.thumbnail.outfit{
+    div.thumbnailoutfit1{
         border-color: lightgrey;
         border: solid;
         border-width: 1px;
     }
+div.thumbnailoutfit2 {
+    border-color: lightgrey;
+    border: solid;
+    border-width: 1px;
+}
+
 
 
 

@@ -6,9 +6,12 @@
     }
     <script src="~/Content/JavaScript.js"></script>
 
-    <h1 id="home">Julie's Delightful Wardrobe</h1>
+    @*title to swap*@
+    <h1 id="home" style="display: flex" onmouseover="Swap('home', 'home1')">Julie's Delightful Wardrobe</h1>
+    @*title that swaps in*@
+    <h1 id="home1"style="display: none" onmouseout="Swap('home', 'home1')">  Stellar Fashion by Julie</h1>
 
-   @*area where greeting will be displayer per greeting function*@
+    @*area where greeting will be displayer per greeting function*@
     <div class="row" id="greeting1">
         <div class="col-md-2 col-sm-0"></div>
         <div class="col-md-2 col-sm-12">
@@ -17,7 +20,7 @@
     </div>
 
 
-@*link to each view*@
+    @*link to each view*@
     <div class="row">
         <div class="col-md-1 col-sm-0"></div>
         <div class="col-md-2 col-sm-12">
@@ -86,8 +89,8 @@
                 <h2 class="home">Contact Julie</h2>
                 <form action="/action_page.php" id="usrform">
 
-                    <textarea id="name" placeholder="Name" rows="1" cols="50"onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea><br />
-                    <textarea id="email" placeholder="email" rows="1" cols="50"onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea><br />
+                    <textarea id="name" placeholder="Name" rows="1" cols="50" onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea><br />
+                    <textarea id="email" placeholder="email" rows="1" cols="50" onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea><br />
                     <textarea id="comments" placeholder="comments" rows="4" cols="50" onfocus="colorChange(this)" onblur="colorNormal(this)"></textarea>
                     <p class="home"><a class="btn btn-default home" href="/Outfits/Index">Submit</a></p>
                 </form>

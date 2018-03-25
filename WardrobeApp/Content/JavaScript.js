@@ -78,6 +78,8 @@ function Swap(div1, div2) {
     }
 };
 
+
+
 //function from homework: onfocus/onblur for fields in a form
 function colorChange(x) {
     x.style.border = "thick solid crimson";
